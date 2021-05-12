@@ -34,14 +34,16 @@ int main() {
   
   // wybór sortowania, do wyboru: MergeSort, QuickSort, BucketSort.
   // Wystarczy smienić nazwę funkcji. Argumnety są te same. 
-   BucketSort(Tab, 0, liczba);
+  MergeSort(Tab, 0, liczba);
   
   for(int i = 0; i <= liczba ; i++) // powtarzaj dla wszystkich elementów
     plik << Tab[i] << endl; // wpisz posortowane filmy do pliku
- 
+  
   plik.close();                // zamknij pliki
   plik_z_nazwami.close();
   plik_z_ocenami.close();
+  
+  delete [] Tab;
   
   return 1;
 }
